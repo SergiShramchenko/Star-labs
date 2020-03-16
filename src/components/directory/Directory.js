@@ -8,33 +8,36 @@ export default class Directory extends Component {
   state = {
     section: [
       {
-        title: 'hats',
-        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+        title: 'laptops',
+        imageUrl: 'https://i.ytimg.com/vi/U-9tUEOFKNU/maxresdefault.jpg',
         id: 1,
-        linkUrl: 'shop/hats'
+        linkUrl: 'shop/laptops'
       },
       {
-        title: 'jackets',
-        imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+        title: 'monitors',
+        imageUrl:
+          'https://tehnot.com/wp-content/uploads/2019/06/Apple_Mac-Pro-Display-Pro_Display-Pro-Workflow_060319.jpg',
         id: 2,
         linkUrl: 'shop/jackets'
       },
       {
-        title: 'sneakers',
-        imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+        title: 'keyboards',
+        imageUrl:
+          'https://cnet1.cbsistatic.com/img/iAwrNF7QZUDGAVS9xD1YAnNnEOo=/1200x675/2019/08/20/db2c8f57-f31e-4995-99e3-50f2c7ce49e3/gaming-keyboards-200-01.jpg',
         id: 3,
         linkUrl: 'shop/sneakers'
       },
       {
-        title: 'womens',
-        imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+        title: 'mouses',
+        imageUrl: 'https://i.gyazo.com/431cb6bfa69ea344426dbbfeee1a31a6.jpg',
         size: 'large',
         id: 4,
         linkUrl: 'shop/womens'
       },
       {
-        title: 'mens',
-        imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+        title: 'headphones',
+        imageUrl:
+          'https://manofmany.com/wp-content/uploads/2019/09/sennheiser-momentum-wireless-headphones-2.jpg',
         size: 'large',
         id: 5,
         linkUrl: 'shop/mens'
@@ -45,8 +48,8 @@ export default class Directory extends Component {
   render() {
     return (
       <div className='directory-menu'>
-        {this.state.section.map(({ title, imageUrl, id, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.section.map(({ id, ...sectionProps }) => (
+          <MenuItem key={id} {...sectionProps} />
         ))}
       </div>
     );
