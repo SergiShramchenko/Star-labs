@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SignIn from '../../components/sign-in/SingIn';
-import SignUp from '../../components/sign-up/SignUp';
+import SignIn from '../../components/sign-in';
+import SignUp from '../../components/sign-up';
 
 import './signInUpPage.scss';
 

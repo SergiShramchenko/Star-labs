@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
 import { auth } from '../../firebase/firebase.utils';
-import CartIcon from '../cart-icon//CartIcon';
-import CartDropDown from '../cart-dropdown/CartDropDown';
+import CartIcon from '../cart-icon';
+import CartDropDown from '../cart-dropdown';
 
 import { ReactComponent as Logo } from '../../assets/the-flash.svg';
 
