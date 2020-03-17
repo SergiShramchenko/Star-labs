@@ -3,7 +3,7 @@ import React from 'react';
 import './cartItem.scss';
 
 export default ({ item: { imageUrl, price, name, quantity } }) => (
-  <div classNam='cart-item'>
+  <div className='cart-item'>
     <img src={imageUrl} alt='item' />
     <span className='name'>{name}</span>
     <span className='price'>
