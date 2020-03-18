@@ -3,12 +3,12 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import HomePage from './pages/home-page/HomePage';
-import ShopPage from './pages/shop-page/ShopPage';
-import SignInUpPage from './pages/sign-in-and-sign-up-page/SignInUpPage';
-import CheckOutPage from './pages/checkout-page/CheckOutPage';
+import HomePage from './pages/home-page';
+import ShopPage from './pages/shop-page';
+import SignInUpPage from './pages/sign-in-and-sign-up-page';
+import CheckOutPage from './pages/checkout-page';
 
-import Header from './components/header/Header';
+import Header from './components/header';
 
 import { auth, createUserProfileDoc } from './firebase/firebase.utils';
 
@@ -26,8 +26,6 @@ class App extends Component {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDoc(userAuth);
-
-        console.log(userRef);
 
         userRef.onSnapshot(snapShot => {
           setCurrentUser({
