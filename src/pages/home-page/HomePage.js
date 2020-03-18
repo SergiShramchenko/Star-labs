@@ -2,6 +2,10 @@ import React from 'react';
 
 import Directory from '../../components/directory';
 
-import './homePage.scss';
+import { HomePageContainer } from './homepage.styles';
 
-export default () => <Directory />;
+export default () => (
+  <HomePageContainer>
+    <Directory />
+  </HomePageContainer>
+);
