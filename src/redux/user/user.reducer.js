@@ -20,10 +20,12 @@ export default (state = initialState, action) => {
       };
     case UserActionsTypes.SIGN_IN_FAILURE:
     case UserActionsTypes.SIGN_OUT_FAILURE:
+    case UserActionsTypes.SIGN_UP_FAILURE:
       return {
         ...state,
         error: action.payload
       };
+
     default:
       return state;
   }
